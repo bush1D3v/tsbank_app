@@ -18,8 +18,8 @@ O **TSBank APP** é uma aplicação **mobile** do nosso queridíssimo <a href="h
    <img align='center' height='54' width='68' title='Tailwindcss' alt='tailwindcss' src='https://github.com/devicons/devicon/blob/master/icons/tailwindcss/tailwindcss-plain.svg' />
    <img align='center' height='68' width='72' title='Potcss' alt='potcss' src='https://github.com/bush1D3v/my_portfolio/assets/133554156/85b7c73b-e181-4c95-b9de-a8e0ba0523d3' />
    <img align='center' height='64' width='68' title='Nativewind' alt='nativewind' src='https://github.com/bush1D3v/tsbank_app/assets/133554156/4fc94d62-52c3-4343-9b2d-4ba6a53e5a7d' />
+   <img align='center' height='58' width='80' title='Tailwindcss-animated' alt='tailwindcss-animated' src='https://github.com/bush1D3v/my_portfolio_html/assets/133554156/364156ca-f265-4478-bcc3-4a12830c46a7' /> 
    <img align='center' height='50' width='70' title='JavaScript' alt='javascript' src='https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg' />
-   <img align='center' height='58' width='80' title='Tailwindcss-animated' alt='tailwindcss-animated' src='https://github.com/bush1D3v/my_portfolio_html/assets/133554156/364156ca-f265-4478-bcc3-4a12830c46a7' /> &nbsp;
    <img align='center' height='70' width='70' title='Docker' alt='docker' src='https://github.com/devicons/devicon/blob/master/icons/docker/docker-plain.svg' />
 </div>
 
