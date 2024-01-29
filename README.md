@@ -12,10 +12,12 @@ O **TSBank APP** é uma aplicação **mobile** do nosso queridíssimo <a href="h
 ## 🛠️ Tecnologias e Ferramentas Utilizadas
 
 <div align='center'>
+   <img align='center' height='64' width='58' title='React Native' alt='react native' src='https://github.com/bush1D3v/tsbank_app/assets/133554156/d97db34b-5c29-4aa3-95ae-b098bf544f52' />
    <img align='center' height='50' width='70' title='TypeScript' alt='typescript' src='https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg' />
-   <img align='center' height='54' width='68' title='React' alt='react' src='https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg' />
+   <img align='center' height='60' width='60' title='Babel' alt='babel' src='https://github.com/bush1D3v/tsbank_app/assets/133554156/cc9f6980-18c2-4025-8afd-395d8e981e36' />
    <img align='center' height='54' width='68' title='Tailwindcss' alt='tailwindcss' src='https://github.com/devicons/devicon/blob/master/icons/tailwindcss/tailwindcss-plain.svg' />
    <img align='center' height='68' width='72' title='Potcss' alt='potcss' src='https://github.com/bush1D3v/my_portfolio/assets/133554156/85b7c73b-e181-4c95-b9de-a8e0ba0523d3' />
+   <img align='center' height='64' width='68' title='Nativewind' alt='nativewind' src='https://github.com/bush1D3v/tsbank_app/assets/133554156/4fc94d62-52c3-4343-9b2d-4ba6a53e5a7d' />
    <img align='center' height='50' width='70' title='JavaScript' alt='javascript' src='https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg' />
    <img align='center' height='58' width='80' title='Tailwindcss-animated' alt='tailwindcss-animated' src='https://github.com/bush1D3v/my_portfolio_html/assets/133554156/364156ca-f265-4478-bcc3-4a12830c46a7' /> &nbsp;
    <img align='center' height='70' width='70' title='Docker' alt='docker' src='https://github.com/devicons/devicon/blob/master/icons/docker/docker-plain.svg' />
@@ -31,7 +33,7 @@ Com a adição do Docker, você agora pode utilizar dos scripts fornecidos em `p
 
 Para isso, segue a lista de funções de cada script:
 
-> `docker-build`: Constrói a imagem docker do projeto <br> `docker`: Sobe e roda/só roda o container tsbank_front <br> `stop`: Para o container tsbank_front <br> `test`: Sobe um container alternativo chamado tsbank_front_tests, roda os testes e exclui o container após a execução dos mesmos <br> `docker-stb`: Sobe um container alternativo chamado tsbank_front_stb, e após a documentação ser fechada pelo seu terminal VSCode com <u>ctrl + c</u>, o container é excluído
+> `docker-build`: Constrói a imagem docker do projeto <br> `docker`: Sobe e roda/só roda o container tsbank_app <br> `docker-stop`: Para o container tsbank_app
 
 # 🖋️ Contribuindo para o TSBank APP
 
