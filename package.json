@@ -8,7 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "docker-build": "docker build -t tsbank_app .",
-    "docker-start": "docker run -p 8080:8080 tsbank_app",
+    "docker-start": "docker run -d -p 8080:8080 tsbank_app",
     "docker-stop": "docker stop $(docker ps -q --filter ancestor=tsbank_app)"
   },
   "dependencies": {
