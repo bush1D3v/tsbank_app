@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:21-alpine
 
 WORKDIR /app
 
@@ -8,6 +8,6 @@ RUN yarn install
 
 COPY . .
 
-EXPOSE 8080
+EXPOSE 8081
 
 CMD ["yarn", "start"]
