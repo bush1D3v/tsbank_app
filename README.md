@@ -33,7 +33,7 @@ Com a adição do Docker, você agora pode utilizar dos scripts fornecidos em `p
 
 Para isso, segue a lista de funções de cada script:
 
-> `docker-build`: Constrói a imagem docker do projeto <br> `docker`: Sobe e roda/só roda o container tsbank_app <br> `docker-stop`: Para o container tsbank_app
+> `docker-build`: Constrói a imagem docker do projeto <br> `docker-start`: Sobe e roda/só roda o container tsbank_app <br> `docker-stop`: Para o container tsbank_app
 
 # 🖋️ Contribuindo para o TSBank APP
 
