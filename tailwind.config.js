@@ -22,8 +22,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("nativewind/tailwind/css"),
-    require("tailwindcss-animated"),
-  ],
+  plugins: [require("nativewind/tailwind/css")],
 };
