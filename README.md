@@ -13,6 +13,7 @@ O **TSBank APP** é uma aplicação **mobile** do nosso queridíssimo <a href="h
 
 <div align='center'>
    <img align='center' height='64' width='58' title='React Native' alt='react native' src='https://github.com/bush1D3v/tsbank_app/assets/133554156/d97db34b-5c29-4aa3-95ae-b098bf544f52' />
+   <img align='center' height='58' width='64' title='Expo' alt='expo' src='https://github.com/bush1D3v/tsbank_app/assets/133554156/8a772dfd-74d8-4e53-9b55-43232da7c82c' />
    <img align='center' height='54' width='68' title='Node.js' alt='nodejs' src='https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original.svg' />
    <img align='center' height='60' width='60' title='Babel' alt='babel' src='https://github.com/bush1D3v/tsbank_app/assets/133554156/cc9f6980-18c2-4025-8afd-395d8e981e36' />
    <img align='center' height='50' width='70' title='TypeScript' alt='typescript' src='https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg' />
