@@ -17,7 +17,7 @@ export function LoginScreen(): React.JSX.Element {
         <Text style={globals.text} className="text-3xl text-center mb-2 font-body">
           Sign in
         </Text>
-        <FormInput placeholder="Email" ariaLabel="Email" autoComplete="email" />
+        <FormInput placeholder="Email" ariaLabel="Email" autoComplete="email" autoFocus />
         <FormInput placeholder="Password" ariaLabel="Password" autoComplete="password" />
         <Button title="Login" />
       </View>
