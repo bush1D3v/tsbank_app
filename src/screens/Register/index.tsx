@@ -17,7 +17,7 @@ export function RegisterScreen(): React.JSX.Element {
         <Text style={globals.text} className="text-3xl mb-2">
           Sign up
         </Text>
-        <FormInput placeholder="Name" ariaLabel="Name" autoComplete="name" />
+        <FormInput placeholder="Name" ariaLabel="Name" autoComplete="name" autoFocus />
         <FormInput placeholder="Email" ariaLabel="Email" autoComplete="email" />
         <View className="w-[48%] flex-row">
           <View className="w-full mr-[2vw]">
