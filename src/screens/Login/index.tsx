@@ -1,7 +1,6 @@
 import {
-  Button,
   Text,
-  TouchableOpacity,
+  Button,
   View
 } from "react-native";
 import { globals } from "@/styles";
@@ -26,12 +25,10 @@ export function LoginScreen(): React.JSX.Element {
         <Text style={globals.text} className="text-xl text-center">
           Don't have an account?
         </Text>
-        <TouchableOpacity activeOpacity={0.5}>
-          <Link style={globals.text} href="/register" className="underline
+        <Link style={globals.text} href="/register" className="underline
           text-xl text-center">
-            Sign Up
-          </Link>
-        </TouchableOpacity>
+          Sign Up
+        </Link>
       </View>
     </View >
   );
