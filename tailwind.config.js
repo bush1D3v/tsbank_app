@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}", "./App.tsx"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -19,6 +19,12 @@ module.exports = {
         input: "#f7e9fbb3",
         darkGray: "#666666",
         lightGray: "#cccccc",
+      },
+      fontFamily: {
+        heading: "Inter_600SemiBold",
+        subtitle: "Inter_500Medium",
+        body: "Inter_400Regular",
+        bold: "Inter_700Bold",
       },
     },
   },
