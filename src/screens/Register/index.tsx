@@ -4,7 +4,6 @@ import { Link } from "expo-router";
 import {
   Button,
   Text,
-  TouchableOpacity,
   View
 } from "react-native";
 
@@ -35,11 +34,9 @@ export function RegisterScreen(): React.JSX.Element {
         <Text style={globals.text} className="text-xl">
           Already have an account?
         </Text>
-        <TouchableOpacity activeOpacity={0.5}>
-          <Link style={globals.text} href="/" className="underline text-xl">
-            Sign In
-          </Link>
-        </TouchableOpacity>
+        <Link style={globals.text} href="/" className="underline text-xl">
+          Sign In
+        </Link>
       </View>
     </View>
   );
