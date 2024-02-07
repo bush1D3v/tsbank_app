@@ -4,12 +4,13 @@ import { Link } from "expo-router";
 import {
   Button,
   Text,
+  TouchableOpacity,
   View
 } from "react-native";
 
-export default function RegisterScreen(): React.JSX.Element {
+export function RegisterScreen(): React.JSX.Element {
   return (
-    <View style={globals.container} className="flex-1 items-center justify-between py-20">
+    <View style={globals.container} className="justify-between py-20">
       <Text style={globals.text} className="font-bold text-5xl">
         Welcome to TSBank!! 🏦
       </Text>
@@ -17,28 +18,28 @@ export default function RegisterScreen(): React.JSX.Element {
         <Text style={globals.text} className="text-3xl mb-2">
           Sign up
         </Text>
-        <FormInput placeholder="Name" ariaLabel="Name" />
-        <FormInput placeholder="Email" ariaLabel="Email" />
+        <FormInput placeholder="Name" ariaLabel="Name" autoComplete="name" />
+        <FormInput placeholder="Email" ariaLabel="Email" autoComplete="email" />
         <View className="w-[48%] flex-row">
           <View className="w-full mr-[2vw]">
             <FormInput placeholder="Cpf" ariaLabel="Cpf" />
           </View>
           <View className="w-full ml-[1vw]">
-            <FormInput placeholder="Phone" ariaLabel="Phone" />
+            <FormInput placeholder="Phone" ariaLabel="Phone" autoComplete="tel" />
           </View>
         </View>
-        <FormInput placeholder="Password" ariaLabel="Password" />
+        <FormInput placeholder="Password" ariaLabel="Password" autoComplete="password" />
         <Button title="Create Account" />
       </View>
       <View className="flex flex-row gap-2">
         <Text style={globals.text} className="text-xl">
           Already have an account?
         </Text>
-        <Link href="/login">
-          <Text style={globals.text} className="underline text-xl">
+        <TouchableOpacity activeOpacity={0.5}>
+          <Link style={globals.text} href="/" className="underline text-xl">
             Sign In
-          </Text>
-        </Link>
+          </Link>
+        </TouchableOpacity>
       </View>
     </View>
   );
