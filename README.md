@@ -20,6 +20,8 @@ O **TSBank APP** é uma aplicação **mobile** do nosso queridíssimo <a href="h
    <img align='center' height='54' width='68' title='Tailwindcss' alt='tailwindcss' src='https://github.com/devicons/devicon/blob/master/icons/tailwindcss/tailwindcss-original.svg' />
    <img align='center' height='50' width='70' title='JavaScript' alt='javascript' src='https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg' />
    <img align='center' height='52' width='56' title='Nativewind' alt='nativewind' src='https://github.com/bush1D3v/tsbank_app/assets/133554156/4fc94d62-52c3-4343-9b2d-4ba6a53e5a7d' /> &nbsp;
+   <img align='center' height='70' width='50' title='Axios' alt='axios' src='https://github.com/bush1D3v/tsbank_front/assets/133554156/b9ff307f-3582-4635-ae6e-361215efc742' /> &nbsp;
+   <img align='center' height='49' width='59' title='Zod' alt='zod' src='https://github.com/bush1D3v/tsbank_front/assets/133554156/5a769805-23e2-4f8b-904d-034b25a982a6' /> &nbsp; &nbsp;
    <img align='center' height='70' width='70' title='Docker' alt='docker' src='https://github.com/devicons/devicon/blob/master/icons/docker/docker-plain.svg' />
 </div>
 
