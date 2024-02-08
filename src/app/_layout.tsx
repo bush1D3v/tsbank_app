@@ -1,6 +1,6 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Slot } from "expo-router";
-
+import { Loading } from "@/components";
 import {
   useFonts,
   Inter_400Regular,
@@ -8,7 +8,8 @@ import {
   Inter_600SemiBold,
   Inter_700Bold
 } from "@expo-google-fonts/inter";
-import { Loading } from "@/components";
+import { UserDataProvider } from "@/contexts";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 export default function Layout(): React.JSX.Element {
   const [ fontsLoaded ] = useFonts({
@@ -22,9 +23,15 @@ export default function Layout(): React.JSX.Element {
     return <Loading />;
   }
 
+  const queryClient = new QueryClient();
+
   return (
-    <SafeAreaView className="flex-1 bg-blueBase">
-      <Slot />
-    </SafeAreaView>
+    <QueryClientProvider client={queryClient}>
+      <UserDataProvider>
+        <SafeAreaView className="flex-1 bg-blueBase">
+          <Slot />
+        </SafeAreaView>
+      </UserDataProvider>
+    </QueryClientProvider>
   );
 }
