@@ -24,9 +24,9 @@ const initialUser: User = {
   id: 0,
   name: "",
   balance: 0,
-  cpf: "00000000000",
-  email: "exemplo@email.com",
-  phone: "21123456789"
+  cpf: "",
+  email: "",
+  phone: ""
 };
 
 
