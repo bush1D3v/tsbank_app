@@ -1,4 +1,7 @@
-import { RegisterSchemaProps, registerSchema } from "./registerSchema";
+import {
+  registerSchema,
+  type RegisterSchemaProps
+} from "./registerSchema";
 
 export {
   registerSchema,
