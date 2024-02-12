@@ -1,3 +1,2 @@
-export const ROOT: string = "/";
-export const LOGIN: string = "/login";
+export const LOGIN: string = "/";
 export const REGISTER: string = "/register";
