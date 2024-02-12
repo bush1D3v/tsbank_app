@@ -5,11 +5,12 @@ import { API_BASE_URL, REGISTER_ENDPOINT } from "@/utils/apiPaths";
 
 export interface registerResponseProps {
   success: boolean;
+  message: string;
 }
 
 export async function registerSubmit(
   data: RegisterSchemaProps
-) {
+): Promise<registerResponseProps> {
   const { userData } = data;
 
   try {
@@ -25,14 +26,16 @@ export async function registerSubmit(
 
     if (response.status === 201) {
       return {
-        success: true
+        success: true,
+        message: "User registered successfully!"
       };
     } else {
       return {
-        success: false
+        success: false,
+        message: "An error occurred while registering the user."
       };
     }
   } catch (error) {
-    handleRequestError(error);
+    return handleRequestError(error);
   }
 }
