@@ -1,4 +1,7 @@
-import { loginSubmit, type loginResponseProps } from "./loginSubmit";
+import {
+  loginSubmit,
+  type loginResponseProps
+} from "./loginSubmit";
 
 export {
   loginSubmit,
