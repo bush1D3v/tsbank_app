@@ -1,4 +1,7 @@
-import { registerSubmit, type registerResponseProps } from "./registerSubmit";
+import {
+  registerSubmit,
+  type registerResponseProps
+} from "./registerSubmit";
 
 export {
   registerSubmit,
