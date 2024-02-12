@@ -6,12 +6,13 @@ import { API_BASE_URL, LOGIN_ENDPOINT } from "@/utils/apiPaths";
 
 export interface loginResponseProps {
   success: boolean;
+  message: string;
   userData?: UserData;
 }
 
 export async function loginSubmit(
   data: LoginSchemaProps
-) {
+): Promise<loginResponseProps> {
   const { userData } = data;
 
   try {
@@ -25,11 +26,13 @@ export async function loginSubmit(
     if (response.status === 200) {
       return {
         success: true,
+        message: "Login completed!",
         userData: response.data
       };
     } else {
       return {
-        success: false
+        success: false,
+        message: "An error occurred while logging in."
       };
     }
   } catch (error) {
