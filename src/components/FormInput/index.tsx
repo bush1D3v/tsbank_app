@@ -16,6 +16,7 @@ export function FormInput({
       self-center border-2 border-white focus:border-blackBlue"
       placeholder={placeholder}
       aria-label={ariaLabel}
+      accessibilityLabel={ariaLabel}
       {...rest}
     />
   );
