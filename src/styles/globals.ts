@@ -8,5 +8,9 @@ export const globals = StyleSheet.create({
   text: {
     color: "#eeeeee",
     textAlign: "center",
+  },
+  error: {
+    color: "#e70008",
+    marginBottom: -8
   }
 });
