@@ -1,6 +1,13 @@
 import { AxiosError, isAxiosError } from "axios";
 
-export function handleRequestError(error: AxiosError | unknown) {
+interface handleRequestErrorProps {
+  success: boolean;
+  message: string;
+}
+
+export function handleRequestError(
+  error: AxiosError | unknown
+): handleRequestErrorProps {
   if (isAxiosError(error)) {
     const axiosError: AxiosError = error;
     if (
