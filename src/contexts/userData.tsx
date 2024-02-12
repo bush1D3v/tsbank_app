@@ -11,7 +11,7 @@ const getUserInfo = async (callback: (user: User) => void) => {
     const userInfo = await AsyncStorage.getItem("userData");
     callback(userInfo ? JSON.parse(userInfo) : initialUser);
   } catch (error) {
-    console.error("Erro ao obter informações do usuário:", error);
+    console.error("Error getting user information:", error);
     callback(initialUser);
   }
 };
@@ -45,45 +45,16 @@ const prevUserInfo = (): User => {
 export const UserDataContext = createContext<{
   userData: User;
   setUserData: React.Dispatch<React.SetStateAction<User>>;
-  isUserLoggedIn: boolean;
-  setIsUserLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
 }>({
   userData: prevUserInfo(),
   setUserData: () => { },
-  isUserLoggedIn: false,
-  setIsUserLoggedIn: () => { },
 });
-
-const getUserIsLogged = async (callback: (isLogged: boolean) => void) => {
-  try {
-    const isLoggedIn = await AsyncStorage.getItem("isLoggedIn");
-    callback(isLoggedIn ? JSON.parse(isLoggedIn) : true);
-  } catch (error) {
-    console.error("Erro ao obter informações do usuário:", error);
-    callback(true);
-  }
-};
-
-const isUserLogged = (): boolean => {
-  let result: boolean | null = null;
-
-  const callback = (isLogged: boolean) => {
-    result = isLogged;
-  };
-
-  getUserIsLogged(callback);
-
-  return result !== null ? result : true;
-};
 
 export const UserDataProvider = ({ children }: ProviderProp): ReactElement => {
   const [ userData, setUserData ] = useState(prevUserInfo);
-  const [ isUserLoggedIn, setIsUserLoggedIn ] = useState<boolean>(isUserLogged);
 
   return (
-    <UserDataContext.Provider
-      value={{ userData, setUserData, isUserLoggedIn, setIsUserLoggedIn }}
-    >
+    <UserDataContext.Provider value={{ userData, setUserData }}>
       {children}
     </UserDataContext.Provider>
   );
