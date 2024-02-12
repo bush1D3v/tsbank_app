@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -21,9 +21,9 @@ module.exports = {
         lightGray: "#cccccc",
       },
       fontFamily: {
-        heading: "Inter_600SemiBold",
-        subtitle: "Inter_500Medium",
         body: "Inter_400Regular",
+        subtitle: "Inter_500Medium",
+        heading: "Inter_600SemiBold",
         bold: "Inter_700Bold",
       },
     },
