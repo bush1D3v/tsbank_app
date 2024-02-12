@@ -1,4 +1,7 @@
-import { loginSchema, type LoginSchemaProps } from "./loginSchema";
+import {
+  loginSchema,
+  type LoginSchemaProps
+} from "./loginSchema";
 
 export {
   loginSchema,
