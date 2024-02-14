@@ -24,10 +24,9 @@ export type FormStateData = {
   }
 }
 
-export type UserDatas = "id" | "name" | "email" | "password" | "phone" | "cpf" |
-  "balance";
-export type CardDatas = "card_number" | "cardholder_name" | "expiration_date" |
-  "cvv" | "user_id" | "created_at";
+export type UserDatas = "id" | "cpf" | "name" | "email" | "phone" | "balance";
+export type CardDatas = "id" | "card_number" | "cardholder_name" | "balance" |
+  "cvv" | "user_id" | "created_at" | "expiration_date";
 
 export interface InputErrorHandlingProps {
   formState: FormState<FormStateData>;
