@@ -1,22 +1,26 @@
-import { globals } from "@/styles";
-import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Text,
   Button,
   View
 } from "react-native";
-import { FormInput, Modal } from "@/components";
-import { Link, router } from "expo-router";
-import { type LoginSchemaProps, loginSchema } from "./schema";
-import { loginSubmit } from "./function";
-import { FormProvider, useForm } from "react-hook-form";
-import { useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { loginSubmit } from "./function";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { router } from "expo-router";
+import { type LoginSchemaProps, loginSchema } from "./schema";
+import { FormProvider, useForm } from "react-hook-form";
+import { useContext, useState } from "react";
+import { globals } from "@/styles";
+import { FormInput, Modal } from "@/components";
+import { HOME } from "@/utils/routerPaths";
+import { UserDataContext } from "@/contexts";
+import { RegisterRedirect } from "./components";
 
 export function LoginScreen(): React.JSX.Element {
   const [ error, setError ] = useState<string>("");
   const [ isLoading, setIsLoading ] = useState<boolean>(false);
   const [ isModalOpen, setIsModalOpen ] = useState<boolean>(false);
+  const { setUserData } = useContext(UserDataContext);
 
   const {
     ...methods
@@ -36,14 +40,15 @@ export function LoginScreen(): React.JSX.Element {
     setIsLoading(!isLoading);
     const result = await loginSubmit(data);
 
-    if (result?.success) {
-      setIsLoading(false);
-      await AsyncStorage.setItem("userData", JSON.stringify(result.userData));
-      router.replace("/home");
-    } else {
+    if (!result.success) {
       setError(result.message);
       setIsLoading(false);
       setIsModalOpen(!isModalOpen);
+    } else if (result.success && result.userData) {
+      setIsLoading(false);
+      await AsyncStorage.setItem("userData", JSON.stringify(result.userData));
+      setUserData(result.userData.user);
+      router.replace(HOME);
     }
   };
 
@@ -64,38 +69,20 @@ export function LoginScreen(): React.JSX.Element {
           Sign in
         </Text>
         <FormProvider {...methods}>
-          {methods.formState.errors.userData?.email?.message && (
-            <Text style={globals.error}>
-              {methods.formState.errors.userData?.email?.message}
-            </Text>
-          )}
           <FormInput
             placeholder="Email"
-            ariaLabel="Email"
+            inputLabel="email"
             autoComplete="email"
             keyboardType="email-address"
-            onChangeText={(text) => {
-              methods.setValue("userData.email", text);
-              methods.trigger("userData.email");
-            }}
-            {...methods.register("userData.email")}
+            formMethods={methods}
           />
-          {methods.formState.errors.userData?.password?.message && (
-            <Text style={globals.error}>
-              {methods.formState.errors.userData?.password?.message}
-            </Text>
-          )}
           <FormInput
-            secureTextEntry
             placeholder="Password"
-            ariaLabel="Password"
+            inputLabel="password"
+            secureTextEntry
             autoComplete="password"
             maxLength={16}
-            onChangeText={(text) => {
-              methods.setValue("userData.password", text);
-              methods.trigger("userData.password");
-            }}
-            {...methods.register("userData.password")}
+            formMethods={methods}
           />
         </FormProvider>
         <Button
@@ -105,14 +92,7 @@ export function LoginScreen(): React.JSX.Element {
           onPress={methods.handleSubmit(onSubmit)}
         />
       </View>
-      <View className="flex flex-row gap-2">
-        <Text style={globals.text} className="text-xl">
-          Don't have an account?
-        </Text>
-        <Link style={globals.text} href="/register" className="underline text-xl">
-          Sign Up
-        </Link>
-      </View>
+      <RegisterRedirect />
     </View >
   );
 }
