@@ -4,13 +4,16 @@ import { FormState } from "react-hook-form";
 
 export type FormStateData = {
   userData?: {
-    id?: string;
+    id?: number;
+    cpf?: string;
     name?: string;
     email?: string;
-    password?: string;
-    cpf?: string;
     phone?: string;
-    balance?: string;
+    balance?: number;
+    new_phone?: string;
+    new_email?: string;
+    new_password?: string;
+    password?: string;
   }
   cardData?: {
     id?: number;
@@ -21,12 +24,22 @@ export type FormStateData = {
     user_id?: number;
     created_at?: string;
     balance?: number;
+    value?: number;
+    card_type?: string;
+  }
+  transactionData?: {
+    email?: string;
+    value?: number;
+    password?: string;
+    cpf?: string;
   }
 }
 
-export type UserDatas = "id" | "cpf" | "name" | "email" | "phone" | "balance";
-export type CardDatas = "id" | "card_number" | "cardholder_name" | "balance" |
-  "cvv" | "user_id" | "created_at" | "expiration_date";
+export type UserDatas = "id" | "cpf" | "name" | "email" | "phone" | "balance" |
+  "new_phone" | "new_email" | "new_password" | "password";
+export type CardDatas = "id" | "card_number" | "cardholder_name" | "expiration_date" |
+  "cvv" | "user_id" | "created_at" | "balance" | "value" | "card_type";
+export type TransactionDatas = "email" | "value" | "password" | "cpf";
 
 export interface InputErrorHandlingProps {
   formState: FormState<FormStateData>;
@@ -48,6 +61,11 @@ export function InputErrorHandling({
         <Text style={globals.error}>
           {formState.errors.cardData?.[ inputDatas as CardDatas ]?.message}
         </Text>
+      )}
+      {formState.errors.transactionData?.[ inputDatas as TransactionDatas ]?.message && (
+        <span style={globals.error}>
+          {formState.errors.transactionData?.[ inputDatas as TransactionDatas ]?.message}
+        </span>
       )}
     </>
   );
