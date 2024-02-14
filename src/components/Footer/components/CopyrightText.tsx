@@ -3,7 +3,7 @@ import { Text, View } from "react-native";
 
 export function CopyrightText(): React.JSX.Element {
   return (
-    <View className="flex flex-col text-start">
+    <View className="flex text-start">
       <Text className="text-white">
         TSBank
       </Text>
