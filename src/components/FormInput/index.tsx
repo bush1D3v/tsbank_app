@@ -3,7 +3,8 @@ import {
   InputErrorHandling,
   type FormStateData,
   type UserDatas,
-  type CardDatas
+  type CardDatas,
+  type TransactionDatas
 } from "./components";
 import {
   type Control,
@@ -60,7 +61,7 @@ export function FormInput({
         formState={formMethods.formState}
         inputDatas={inputLabel}
       />
-      {formMethods.formState.defaultValues?.userData ? (
+      {formMethods.formState.defaultValues?.userData && (
         <TextInput
           className="h-10 w-full bg-white rounded-lg placeholder:pl-4 my-2
           self-center border-2 border-white focus:border-blackBlue"
@@ -68,13 +69,14 @@ export function FormInput({
           aria-label={placeholder}
           accessibilityLabel={placeholder}
           onChangeText={(text: string) => {
-            formMethods.setValue(`userData.${inputLabel}`, text);
-            formMethods.trigger(`userData.${inputLabel}`);
+            formMethods.setValue(`userData.${inputLabel as UserDatas}`, text);
+            formMethods.trigger(`userData.${inputLabel as UserDatas}`);
           }}
-          {...formMethods.register(`userData.${inputLabel}`)}
+          {...formMethods.register(`userData.${inputLabel as UserDatas}`)}
           {...rest}
         />
-      ) : (
+      )}
+      {formMethods.formState.defaultValues?.cardData && (
         <TextInput
           className="h-10 w-full bg-white rounded-lg placeholder:pl-4 my-2
           self-center border-2 border-white focus:border-blackBlue"
@@ -82,10 +84,25 @@ export function FormInput({
           aria-label={placeholder}
           accessibilityLabel={placeholder}
           onChangeText={(text: string) => {
-            formMethods.setValue(`cardData.${inputLabel}`, text);
-            formMethods.trigger(`cardData.${inputLabel}`);
+            formMethods.setValue(`cardData.${inputLabel as CardDatas}`, text);
+            formMethods.trigger(`cardData.${inputLabel as CardDatas}`);
           }}
-          {...formMethods.register(`cardData.${inputLabel}`)}
+          {...formMethods.register(`cardData.${inputLabel as CardDatas}`)}
+          {...rest}
+        />
+      )}
+      {formMethods.formState.defaultValues?.transactionData && (
+        <TextInput
+          className="h-10 w-full bg-white rounded-lg placeholder:pl-4 my-2
+          self-center border-2 border-white focus:border-blackBlue"
+          placeholder={placeholder}
+          aria-label={placeholder}
+          accessibilityLabel={placeholder}
+          onChangeText={(text: string) => {
+            formMethods.setValue(`transactionData.${inputLabel as TransactionDatas}`, text);
+            formMethods.trigger(`transactionData.${inputLabel as TransactionDatas}`);
+          }}
+          {...formMethods.register(`transactionData.${inputLabel as TransactionDatas}`)}
           {...rest}
         />
       )}
