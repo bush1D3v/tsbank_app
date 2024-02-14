@@ -54,27 +54,13 @@ export function FormInput({
   formMethods,
   ...rest
 }: FormInputProps): React.JSX.Element {
-  function verifyLabelType(label: string): number {
-    //! 0 = UserDatas
-    //! 1 = CardDatas
-    if (
-      label === "id" || label === "name" || label === "email" ||
-      label === "password" || label === "phone" || label === "cpf" ||
-      label === "balance"
-    ) {
-      return 0;
-    } else {
-      return 1;
-    }
-  }
-
   return (
     <>
       <InputErrorHandling
         formState={formMethods.formState}
         inputDatas={inputLabel}
       />
-      {verifyLabelType(inputLabel) === 0 ? (
+      {formMethods.formState.defaultValues?.userData ? (
         <TextInput
           className="h-10 w-full bg-white rounded-lg placeholder:pl-4 my-2
           self-center border-2 border-white focus:border-blackBlue"
