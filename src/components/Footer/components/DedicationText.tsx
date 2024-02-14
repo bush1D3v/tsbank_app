@@ -4,7 +4,7 @@ import { Text, View } from "react-native";
 
 export function DedicationText(): React.JSX.Element {
   return (
-    <View className="flex flex-col text-center">
+    <View className="flex text-center">
       <Text style={globals.text}>
         Made with 💖
       </Text>
