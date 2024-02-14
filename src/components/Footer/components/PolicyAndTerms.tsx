@@ -2,13 +2,13 @@ import { globals } from "@/styles";
 import { Link } from "expo-router";
 import { FlatList } from "react-native";
 
-interface PolicyItem {
+interface PolicyAndTermsItems {
   key: string;
   href: `${string}:${string}`;
 }
 
 export function PolicyAndTerms(): React.JSX.Element {
-  const data: PolicyItem[] = [
+  const data: PolicyAndTermsItems[] = [
     {
       key: "Privacy Policy",
       href: "https://drive.google.com/file/d/1Mjdv1KKwJpRGx7gDOQ_X80mUAUpsSy7j/view?usp=sharing"
@@ -20,7 +20,7 @@ export function PolicyAndTerms(): React.JSX.Element {
   ];
 
   return (
-    <FlatList className="flex flex-col"
+    <FlatList className="flex"
       data={data}
       renderItem={({ item }) =>
         <Link
