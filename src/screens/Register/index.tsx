@@ -1,6 +1,6 @@
 import { globals } from "@/styles";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Link, router } from "expo-router";
+import { router } from "expo-router";
 import { FormInput, Modal } from "@/components";
 import {
   Button,
@@ -11,6 +11,7 @@ import { type RegisterSchemaProps, registerSchema } from "./schema";
 import { useForm, FormProvider } from "react-hook-form";
 import { useState } from "react";
 import { registerSubmit } from "./function";
+import { LoginRedirect } from "./components";
 
 export function RegisterScreen(): React.JSX.Element {
   const [ error, setError ] = useState<string>("");
@@ -65,69 +66,39 @@ export function RegisterScreen(): React.JSX.Element {
           Sign up
         </Text>
         <FormProvider {...methods}>
-          {methods.formState.errors.userData?.name?.message && (
-            <Text style={globals.error}>
-              {methods.formState.errors.userData?.name?.message}
-            </Text>
-          )}
           <FormInput
             placeholder="Name"
-            ariaLabel="Name"
+            inputLabel="name"
             autoComplete="name"
-            onChangeText={(text) => {
-              methods.setValue("userData.name", text);
-              methods.trigger("userData.name");
-            }}
-            {...methods.register("userData.name")}
+            maxLength={75}
+            formMethods={methods}
           />
-          {methods.formState.errors.userData?.email?.message && (
-            <Text style={globals.error}>
-              {methods.formState.errors.userData?.email?.message}
-            </Text>
-          )}
           <FormInput
             placeholder="Email"
-            ariaLabel="Email"
+            inputLabel="email"
             autoComplete="email"
+            maxLength={75}
             keyboardType="email-address"
-            onChangeText={(text) => {
-              methods.setValue("userData.email", text);
-              methods.trigger("userData.email");
-            }}
-            {...methods.register("userData.email")}
+            formMethods={methods}
           />
           <View className="w-[48%] flex-row">
             <View className="w-full mr-[2vw]">
-              {methods.formState.errors.userData?.cpf?.message && (
-                <Text style={globals.error}>
-                  {methods.formState.errors.userData?.cpf?.message}
-                </Text>
-              )}
               <FormInput
                 keyboardType="numeric"
                 placeholder="Cpf"
-                ariaLabel="Cpf"
-                autoComplete="off"
+                inputLabel="cpf"
                 maxLength={11}
-                onChangeText={(text) => {
-                  methods.setValue("userData.cpf", text);
-                  methods.trigger("userData.cpf");
-                }}
-                {...methods.register("userData.cpf")}
+                formMethods={methods}
               />
             </View>
             <View className="w-full ml-[1vw]">
-              {methods.formState.errors.userData?.phone?.message && (
-                <Text style={globals.error}>
-                  {methods.formState.errors.userData?.phone?.message}
-                </Text>
-              )}
               <FormInput
-                keyboardType="numeric"
                 placeholder="Phone"
-                ariaLabel="Phone"
+                inputLabel="phone"
+                keyboardType="numeric"
                 autoComplete="tel"
                 maxLength={11}
+                formMethods={methods}
                 onChangeText={(text) => {
                   methods.setValue("userData.phone", text);
                   methods.trigger("userData.phone");
@@ -136,22 +107,13 @@ export function RegisterScreen(): React.JSX.Element {
               />
             </View>
           </View>
-          {methods.formState.errors.userData?.password?.message && (
-            <Text style={globals.error}>
-              {methods.formState.errors.userData?.password?.message}
-            </Text>
-          )}
           <FormInput
-            secureTextEntry
             placeholder="Password"
-            ariaLabel="Password"
+            inputLabel="password"
+            secureTextEntry
             autoComplete="password"
             maxLength={16}
-            onChangeText={(text) => {
-              methods.setValue("userData.password", text);
-              methods.trigger("userData.password");
-            }}
-            {...methods.register("userData.password")}
+            formMethods={methods}
           />
         </FormProvider>
         <Button
@@ -161,14 +123,7 @@ export function RegisterScreen(): React.JSX.Element {
           onPress={methods.handleSubmit(onSubmit)}
         />
       </View>
-      <View className="flex flex-row gap-2">
-        <Text style={globals.text} className="text-xl">
-          Already have an account?
-        </Text>
-        <Link style={globals.text} href="/" className="underline text-xl">
-          Sign In
-        </Link>
-      </View>
+      <LoginRedirect />
     </View >
   );
 }
