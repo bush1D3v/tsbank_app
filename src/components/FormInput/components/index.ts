@@ -3,7 +3,8 @@ import {
   type InputErrorHandlingProps,
   type FormStateData,
   type UserDatas,
-  type CardDatas
+  type CardDatas,
+  type TransactionDatas
 } from "./InputErrorHandling";
 
 export {
@@ -11,5 +12,6 @@ export {
   type InputErrorHandlingProps,
   type FormStateData,
   type UserDatas,
-  type CardDatas
+  type CardDatas,
+  type TransactionDatas
 };
