@@ -41,9 +41,9 @@ export type CardDatas = "id" | "card_number" | "cardholder_name" | "expiration_d
   "cvv" | "user_id" | "created_at" | "balance" | "value" | "card_type";
 export type TransactionDatas = "email" | "value" | "password" | "cpf";
 
-export interface InputErrorHandlingProps {
+interface InputErrorHandlingProps {
   formState: FormState<FormStateData>;
-  inputDatas: UserDatas | CardDatas;
+  inputDatas: UserDatas | CardDatas | TransactionDatas;
 }
 
 export function InputErrorHandling({
