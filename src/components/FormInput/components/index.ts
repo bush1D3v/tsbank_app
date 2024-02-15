@@ -1,6 +1,5 @@
 import {
   InputErrorHandling,
-  type InputErrorHandlingProps,
   type FormStateData,
   type UserDatas,
   type CardDatas,
@@ -9,7 +8,6 @@ import {
 
 export {
   InputErrorHandling,
-  type InputErrorHandlingProps,
   type FormStateData,
   type UserDatas,
   type CardDatas,
