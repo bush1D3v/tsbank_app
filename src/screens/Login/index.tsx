@@ -74,13 +74,14 @@ export function LoginScreen(): React.JSX.Element {
             inputLabel="email"
             autoComplete="email"
             keyboardType="email-address"
+            maxLength={75}
             formMethods={methods}
           />
           <FormInput
             placeholder="Password"
             inputLabel="password"
             secureTextEntry
-            autoComplete="password"
+            autoComplete="current-password"
             maxLength={16}
             formMethods={methods}
           />
