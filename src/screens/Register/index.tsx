@@ -84,11 +84,12 @@ export function RegisterScreen(): React.JSX.Element {
           <View className="w-[48%] flex-row">
             <View className="w-full mr-[2vw]">
               <FormInput
-                keyboardType="numeric"
                 placeholder="Cpf"
                 inputLabel="cpf"
+                keyboardType="numeric"
                 maxLength={11}
                 formMethods={methods}
+                autoComplete="off"
               />
             </View>
             <View className="w-full ml-[1vw]">
@@ -99,11 +100,6 @@ export function RegisterScreen(): React.JSX.Element {
                 autoComplete="tel"
                 maxLength={11}
                 formMethods={methods}
-                onChangeText={(text) => {
-                  methods.setValue("userData.phone", text);
-                  methods.trigger("userData.phone");
-                }}
-                {...methods.register("userData.phone")}
               />
             </View>
           </View>
