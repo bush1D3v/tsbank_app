@@ -69,6 +69,8 @@ export function FormInput({
           aria-label={placeholder}
           accessibilityLabel={placeholder}
           onChangeText={(text: string) => {
+            text.replace(/-/g, "");
+            text.replace(/,/g, "");
             formMethods.setValue(`userData.${inputLabel as UserDatas}`, text);
             formMethods.trigger(`userData.${inputLabel as UserDatas}`);
           }}
@@ -84,8 +86,13 @@ export function FormInput({
           aria-label={placeholder}
           accessibilityLabel={placeholder}
           onChangeText={(text: string) => {
+            text.replace(/-/g, "");
+            text.replace(/,/g, "");
             formMethods.setValue(`cardData.${inputLabel as CardDatas}`, text);
             formMethods.trigger(`cardData.${inputLabel as CardDatas}`);
+            if (inputLabel === "card_number") {
+              text.replace(/\s/g, "");
+            }
           }}
           {...formMethods.register(`cardData.${inputLabel as CardDatas}`)}
           {...rest}
@@ -99,6 +106,8 @@ export function FormInput({
           aria-label={placeholder}
           accessibilityLabel={placeholder}
           onChangeText={(text: string) => {
+            text.replace(/-/g, "");
+            text.replace(/,/g, "");
             formMethods.setValue(`transactionData.${inputLabel as TransactionDatas}`, text);
             formMethods.trigger(`transactionData.${inputLabel as TransactionDatas}`);
           }}
