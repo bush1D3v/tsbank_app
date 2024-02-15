@@ -45,7 +45,7 @@ interface FormMethodsProps {
 
 type FormInputProps = TextInputProps & {
   placeholder: string;
-  inputLabel: UserDatas | CardDatas;
+  inputLabel: UserDatas | CardDatas | TransactionDatas;
   formMethods: FormMethodsProps;
 }
 
