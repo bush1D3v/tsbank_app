@@ -6,7 +6,6 @@ export const loginSchema = z.object({
       .email("Invalid email address"),
     password: z.string()
       .min(8, "Please enter a valid password")
-      .max(16, "Password limited to 16 characters")
   })
 });
 
