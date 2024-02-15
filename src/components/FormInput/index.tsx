@@ -30,17 +30,17 @@ interface FormMethodsProps {
   setFocus: UseFormSetFocus<FormStateData>;
   getFieldState: UseFormGetFieldState<FormStateData>;
   handleSubmit: UseFormHandleSubmit<FormStateData>;
-  setValue: UseFormSetValue<any>;
-  trigger: UseFormTrigger<any>;
-  register: UseFormRegister<any>;
-  unregister: UseFormUnregister<any>;
-  clearErrors: UseFormClearErrors<any>;
-  watch: UseFormWatch<any>;
-  getValues: UseFormGetValues<any>;
-  reset: UseFormReset<any>;
-  resetField: UseFormResetField<any>;
-  setError: UseFormSetError<any>;
-  control: Control<any>;
+  setValue: UseFormSetValue<FormStateData | any>;
+  trigger: UseFormTrigger<FormStateData | any>;
+  register: UseFormRegister<FormStateData | any>;
+  unregister: UseFormUnregister<FormStateData | any>;
+  clearErrors: UseFormClearErrors<FormStateData | any>;
+  watch: UseFormWatch<FormStateData | any>;
+  getValues: UseFormGetValues<FormStateData | any>;
+  reset: UseFormReset<FormStateData | any>;
+  resetField: UseFormResetField<FormStateData | any>;
+  setError: UseFormSetError<FormStateData | any>;
+  control: Control<FormStateData | any>;
 }
 
 type FormInputProps = TextInputProps & {
