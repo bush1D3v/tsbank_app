@@ -2,6 +2,5 @@ node_modules
 .dockerignore
 .editorconfig
 .eslintrc.js
-.gitignore
 LICENSE
 README.md
