@@ -1,13 +1,13 @@
-FROM oven/bun:1
+FROM node:21-alpine
 
 WORKDIR /app
 
-COPY package.json bun.lockb ./
+COPY package.json yarn.lock ./
 
-RUN bun install
+RUN yarn install
 
 COPY . .
 
 EXPOSE 8081
 
-CMD ["bun", "start-no-clear"]
+CMD ["yarn", "start-no-clear"]
