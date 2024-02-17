@@ -17,11 +17,13 @@
   },
   "keywords": [
     "bun",
+    "yarn",
     "react",
     "react native",
     "expo",
     "docker",
     "tailwind",
+    "nativewind",
     "typescript",
     "eslint",
     "node",
@@ -29,7 +31,8 @@
     "axios",
     "zod",
     "react-hook-form",
-    "tsbank"
+    "tsbank",
+    "babel"
   ],
   "dependencies": {
     "@expo-google-fonts/inter": "^0.2.3",
