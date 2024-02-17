@@ -2,5 +2,7 @@ node_modules
 .dockerignore
 .editorconfig
 .eslintrc.js
+.gitignore
+bun.lockb
 LICENSE
 README.md
