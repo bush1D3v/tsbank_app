@@ -1,7 +1,7 @@
 import { globals } from "@/styles";
-import { Href, Link } from "expo-router";
+import { Href, Link, LinkProps } from "expo-router";
 
-type AnchorLinkProps = {
+type AnchorLinkProps = LinkProps<Href<string>> & {
   text: string;
   buttonBg: `bg-${string}`;
   href: Href<string>;
@@ -10,7 +10,8 @@ type AnchorLinkProps = {
 export function AnchorLink({
   text,
   buttonBg,
-  href
+  href,
+  ...rest
 }: AnchorLinkProps): React.JSX.Element {
   const className =
     `px-5 py-1 ${buttonBg} border-white rounded-2xl border-2 font-bold
@@ -21,6 +22,7 @@ export function AnchorLink({
       style={globals.text}
       href={href}
       className={className}
+      {...rest}
     >
       {text}
     </Link>
