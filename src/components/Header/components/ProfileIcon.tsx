@@ -1,6 +1,6 @@
 import { PROFILE } from "@/utils/routerPaths";
 import { Link } from "expo-router";
-import Icon from "react-native-vector-icons/Ionicons";
+import Icon from "@expo/vector-icons/Ionicons";
 
 export function ProfileIcon(): React.JSX.Element {
   return (
