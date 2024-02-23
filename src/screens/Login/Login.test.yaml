@@ -1,0 +1,14 @@
+appId: com.tsbank.app
+---
+- openLink: exp://127.0.0.1:8081
+
+- tapOn:
+    id: LoginEmailInput
+- inputRandomEmail
+
+- tapOn:
+    id: LoginPasswordInput
+- inputRandomNumber
+
+- tapOn:
+    id: LoginSubmitButton
