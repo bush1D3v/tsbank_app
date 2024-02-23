@@ -14,6 +14,7 @@ import {
 } from "@expo-google-fonts/inter";
 import { UserDataProvider } from "@/contexts";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { Keyboard, TouchableWithoutFeedback } from "react-native";
 
 export default function Layout(): React.JSX.Element {
   const [ fontsLoaded ] = useFonts({
@@ -31,7 +32,7 @@ export default function Layout(): React.JSX.Element {
     const actualPath = usePathname();
 
     return (
-      <>
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss} >
         {actualPath === "/" || actualPath === "/register" ? (
           <Slot />
         ) : (
@@ -41,7 +42,7 @@ export default function Layout(): React.JSX.Element {
             <Footer />
           </>
         )}
-      </>
+      </TouchableWithoutFeedback>
     );
   };
 
