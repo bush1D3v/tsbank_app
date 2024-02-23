@@ -1,0 +1,15 @@
+{
+  "[*.test.yaml]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": false
+  },
+  "symbols.files.associations": {
+    "jestSetupFile.js": "jest",
+    "babel.config.js": "babel",
+    "app.json": "pulumi",
+    "*.test.tsx": "react-test"
+  },
+  "explorer.fileNesting.patterns": {
+    "jest.config.js": "jestSetupFile.js"
+  }
+}
