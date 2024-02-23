@@ -10,10 +10,8 @@ export function UserReception(): React.JSX.Element {
 
   return (
     <View className="flex items-center gap-4">
-      <Text style={globals.text} className="text-3xl font-bold -mb-2">
-        Hello
-      </Text>
-      <Text style={globals.text} className="text-2xl font-bold">
+      <Text style={globals.text} className="text-3xl font-bold">
+        Hello {"\n"}
         {userData.name} 👋
       </Text>
       <View className="flex flex-row items-center mb-4">
