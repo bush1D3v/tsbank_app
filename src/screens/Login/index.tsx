@@ -62,7 +62,8 @@ export function LoginScreen(): React.JSX.Element {
         btnMessage="Try again"
       />
       <Text style={globals.text} className="font-bold text-5xl text-center">
-        Welcome back!! 👋
+        Welcome back!! {"\n"}
+        👋
       </Text>
       <View className="w-4/5">
         <Text style={globals.text} className="text-3xl text-center mb-2 font-body">
@@ -76,6 +77,7 @@ export function LoginScreen(): React.JSX.Element {
             keyboardType="email-address"
             maxLength={75}
             formMethods={methods}
+            testID="LoginEmailInput"
           />
           <FormInput
             placeholder="Password"
@@ -84,6 +86,7 @@ export function LoginScreen(): React.JSX.Element {
             autoComplete="current-password"
             maxLength={16}
             formMethods={methods}
+            testID="LoginPasswordInput"
           />
         </FormProvider>
         <Button
@@ -91,6 +94,7 @@ export function LoginScreen(): React.JSX.Element {
           accessibilityLabel={isLoading ? "Logging in..." : "Login"}
           title={isLoading ? "Logging in..." : "Login"}
           onPress={methods.handleSubmit(onSubmit)}
+          testID="LoginSubmitButton"
         />
       </View>
       <RegisterRedirect />
