@@ -12,26 +12,23 @@
       "resizeMode": "contain",
       "backgroundColor": "#3178c6"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tsbank.app"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./public/adaptive-icon.png",
         "backgroundColor": "#3178c6"
-      }
+      },
+      "package": "com.tsbank.app"
     },
     "web": {
       "favicon": "./public/favicon.png",
       "bundler": "metro"
     },
-    "plugins": [
-      "expo-router",
-      "expo-font"
-    ],
+    "plugins": ["expo-router", "expo-font"],
     "experiments": {
       "typedRoutes": true
     }
