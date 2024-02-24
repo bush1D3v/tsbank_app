@@ -26,6 +26,7 @@ O **TSBank APP** é uma aplicação **mobile** do nosso queridíssimo <a href="h
    <img align='center' height='75' width='75' title='Docker' alt='docker' src='https://github.com/devicons/devicon/blob/master/icons/docker/docker-plain.svg' />&nbsp;&nbsp;
    <img align='center' height='50' width='50' title='Maestro' alt='maestro' src='https://github.com/bush1D3v/tsbank_app/assets/133554156/8d6658d9-cdab-4914-8e5d-bf15c73354ac' />&nbsp;&nbsp;
    <img align='center' height='54' width='68' title='Jest' alt='jest' src='https://github.com/devicons/devicon/blob/master/icons/jest/jest-plain.svg' />&nbsp;
+   <img align='center' height='54' width='58' title='React Native Testing Library' alt='react native testing library' src='https://github.com/bush1D3v/tsbank_app/assets/133554156/3c784e7a-699a-4dd0-b80f-a87616f5aae0' />&nbsp;
    <img align='center' height='54' width='44' title='Storybook-js' alt='storybook-js' src='https://github.com/bush1D3v/my_portfolio/assets/133554156/213c8aa4-ce24-4b30-8e07-dceb476e8589' />
 </div>
 
