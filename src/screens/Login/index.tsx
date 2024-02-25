@@ -53,7 +53,10 @@ export function LoginScreen(): React.JSX.Element {
   };
 
   return (
-    <View style={globals.container} className="justify-between py-20 font-bold">
+    <View
+      style={globals.container} testID="LoginScreen"
+      className="justify-between py-20 font-bold"
+    >
       <Modal
         isOpen={isModalOpen}
         setOpen={setIsModalOpen}
@@ -61,12 +64,16 @@ export function LoginScreen(): React.JSX.Element {
         description={error}
         btnMessage="Try again"
       />
-      <Text style={globals.text} className="font-bold text-5xl text-center">
+      <Text style={globals.text} testID="LoginScreenWelcomeText"
+        className="font-bold text-5xl text-center"
+      >
         Welcome back!! {"\n"}
         👋
       </Text>
       <View className="w-4/5">
-        <Text style={globals.text} className="text-3xl text-center mb-2 font-body">
+        <Text style={globals.text} testID="LoginScreenSignInText"
+          className="text-3xl text-center mb-2 font-body"
+        >
           Sign in
         </Text>
         <FormProvider {...methods}>
@@ -77,7 +84,7 @@ export function LoginScreen(): React.JSX.Element {
             keyboardType="email-address"
             maxLength={75}
             formMethods={methods}
-            testID="LoginEmailInput"
+            testID="LoginScreenEmailInput"
           />
           <FormInput
             placeholder="Password"
@@ -86,7 +93,7 @@ export function LoginScreen(): React.JSX.Element {
             autoComplete="current-password"
             maxLength={16}
             formMethods={methods}
-            testID="LoginPasswordInput"
+            testID="LoginScreenPasswordInput"
           />
         </FormProvider>
         <Button
@@ -94,7 +101,7 @@ export function LoginScreen(): React.JSX.Element {
           accessibilityLabel={isLoading ? "Logging in..." : "Login"}
           title={isLoading ? "Logging in..." : "Login"}
           onPress={methods.handleSubmit(onSubmit)}
-          testID="LoginSubmitButton"
+          testID="LoginScreenSubmitButton"
         />
       </View>
       <RegisterRedirect />
