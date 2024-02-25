@@ -23,7 +23,7 @@ export function Modal({
   if (isOpen) {
     return (
       <View className="absolute flex top-0 bottom-0 left-0 right-0
-      bg-[#00000090] justify-center z-10">
+      bg-[#00000090] justify-center z-10" testID="Modal">
         <View className="bg-blueBase m-2 p-10 rounded-lg">
           <Text style={globals.text} className="text-4xl mb-2 font-bold">
             {title}
