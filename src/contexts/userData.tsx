@@ -6,20 +6,6 @@ import {
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { type User } from "@/types";
 
-const getUserInfo = async (callback: (user: User) => void) => {
-  try {
-    const userInfo = await AsyncStorage.getItem("userData");
-    callback(userInfo ? JSON.parse(userInfo) : initialUser);
-  } catch (error) {
-    console.error("Error getting user information:", error);
-    callback(initialUser);
-  }
-};
-
-interface ProviderProp {
-  children: React.ReactNode;
-}
-
 const initialUser: User = {
   id: 0,
   name: "",
@@ -29,6 +15,18 @@ const initialUser: User = {
   phone: ""
 };
 
+const getUserInfo = async (callback: (user: User) => void) => {
+  try {
+    const userInfo = await AsyncStorage.getItem("userData");
+    callback(userInfo ? JSON.parse(userInfo) : initialUser);
+  } catch (error) {
+    callback(initialUser);
+  }
+};
+
+interface ProviderProp {
+  children: React.ReactNode;
+}
 
 const prevUserInfo = (): User => {
   let result: User | null = null;
