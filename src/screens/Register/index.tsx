@@ -50,7 +50,9 @@ export function RegisterScreen(): React.JSX.Element {
   };
 
   return (
-    <View style={globals.container} className="justify-between py-20">
+    <View style={globals.container} testID="RegisterScreen"
+      className="justify-between py-20"
+    >
       <Modal
         isOpen={isModalOpen}
         setOpen={setIsModalOpen}
@@ -58,11 +60,15 @@ export function RegisterScreen(): React.JSX.Element {
         description={error}
         btnMessage="Try again"
       />
-      <Text style={globals.text} className="font-bold text-5xl">
+      <Text style={globals.text} testID="RegisterScreenWelcomeText"
+        className="font-bold text-5xl"
+      >
         Welcome to TSBank!! 🏦
       </Text>
       <View className="w-4/5">
-        <Text style={globals.text} className="text-3xl mb-2">
+        <Text style={globals.text} testID="RegisterScreenSignUpText"
+          className="text-3xl mb-2"
+        >
           Sign up
         </Text>
         <FormProvider {...methods}>
@@ -72,6 +78,7 @@ export function RegisterScreen(): React.JSX.Element {
             autoComplete="name"
             maxLength={75}
             formMethods={methods}
+            testID="RegisterScreenNameInput"
           />
           <FormInput
             placeholder="Email"
@@ -80,6 +87,7 @@ export function RegisterScreen(): React.JSX.Element {
             maxLength={75}
             keyboardType="email-address"
             formMethods={methods}
+            testID="RegisterScreenEmailInput"
           />
           <View className="w-[48%] flex-row">
             <View className="w-full mr-[2vw]">
@@ -90,6 +98,7 @@ export function RegisterScreen(): React.JSX.Element {
                 maxLength={11}
                 formMethods={methods}
                 autoComplete="off"
+                testID="RegisterScreenCpfInput"
               />
             </View>
             <View className="w-full ml-[1vw]">
@@ -100,6 +109,7 @@ export function RegisterScreen(): React.JSX.Element {
                 autoComplete="tel"
                 maxLength={11}
                 formMethods={methods}
+                testID="RegisterScreenPhoneInput"
               />
             </View>
           </View>
@@ -110,6 +120,7 @@ export function RegisterScreen(): React.JSX.Element {
             autoComplete="password"
             maxLength={16}
             formMethods={methods}
+            testID="RegisterScreenPasswordInput"
           />
         </FormProvider>
         <Button
@@ -117,6 +128,7 @@ export function RegisterScreen(): React.JSX.Element {
           accessibilityLabel={isLoading ? "Creating..." : "Create Account"}
           title={isLoading ? "Creating..." : "Create Account"}
           onPress={methods.handleSubmit(onSubmit)}
+          testID="RegisterScreenSubmitButton"
         />
       </View>
       <LoginRedirect />
