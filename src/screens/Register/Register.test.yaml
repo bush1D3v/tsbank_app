@@ -1,0 +1,34 @@
+appId: com.tsbank.app
+---
+- openLink: exp://127.0.0.1:8081
+
+- tapOn:
+    id: RegisterRedirectLink
+
+- tapOn:
+    id: RegisterScreenNameInput
+- inputText: "Testing John Doe"
+
+- tapOn:
+    id: RegisterScreenEmailInput
+- inputRandomEmail
+
+- tapOn:
+    id: RegisterScreenCpfInput
+- inputRandomNumber:
+    length: 11
+
+- tapOn:
+    id: RegisterScreenPhoneInput
+- inputRandomNumber:
+    length: 11
+
+- tapOn:
+    id: RegisterScreenPasswordInput
+- inputRandomNumber:
+    length: 8
+
+- hideKeyboard
+
+- tapOn:
+    id: RegisterScreenSubmitButton
