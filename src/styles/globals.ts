@@ -5,6 +5,7 @@ export const globals = StyleSheet.create({
     flex: 1,
     display: "flex",
     alignItems: "center",
+    backgroundColor: "#3178c6",
   },
   text: {
     color: "#eeeeee",
