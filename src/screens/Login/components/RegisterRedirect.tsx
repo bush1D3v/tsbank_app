@@ -5,11 +5,12 @@ import { REGISTER } from "@/utils/routerPaths";
 
 export function RegisterRedirect(): React.JSX.Element {
   return (
-    <View className="flex flex-row gap-2">
-      <Text style={globals.text} className="text-xl">
+    <View className="flex flex-row gap-2" testID="RegisterRedirect">
+      <Text style={globals.text} testID="RegisterRedirectText" className="text-xl">
         Don't have an account?
       </Text>
-      <Link style={globals.text} href={REGISTER} className="underline text-xl">
+      <Link style={globals.text} href={REGISTER} testID="RegisterRedirectLink"
+        className="underline text-xl">
         Sign Up
       </Link>
     </View>
