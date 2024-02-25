@@ -6,10 +6,22 @@
   "symbols.files.associations": {
     "jestSetupFile.js": "jest",
     "babel.config.js": "babel",
-    "app.json": "pulumi",
+    "app.config.ts": "pulumi",
     "*.test.tsx": "react-test"
+  },
+  "symbols.folders.associations": {
+    ".expo": "folder-purple-outline",
+    ".storybook": "folder-database",
+    ".vscode": "folder-blue-outline",
+    "node_modules": "folder-green-outline",
+    "schema": "folder-red",
+    "function": "folder-sky",
+    "functions": "folder-sky",
+    "screens": "folder-orange",
+    "utils": "folder-target"
   },
   "explorer.fileNesting.patterns": {
     "jest.config.js": "jestSetupFile.js"
-  }
+  },
+  "cSpell.words": ["descomente"]
 }
