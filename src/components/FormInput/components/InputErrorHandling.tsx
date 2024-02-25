@@ -53,19 +53,19 @@ export function InputErrorHandling({
   return (
     <>
       {formState.errors.userData?.[ inputDatas as UserDatas ]?.message && (
-        <Text style={globals.error}>
+        <Text style={globals.error} testID="InputErrorHandling">
           {formState.errors.userData?.[ inputDatas as UserDatas ]?.message}
         </Text>
       )}
       {formState.errors.cardData?.[ inputDatas as CardDatas ]?.message && (
-        <Text style={globals.error}>
+        <Text style={globals.error} testID="InputErrorHandling">
           {formState.errors.cardData?.[ inputDatas as CardDatas ]?.message}
         </Text>
       )}
       {formState.errors.transactionData?.[ inputDatas as TransactionDatas ]?.message && (
-        <span style={globals.error}>
+        <Text style={globals.error} testID="InputErrorHandling">
           {formState.errors.transactionData?.[ inputDatas as TransactionDatas ]?.message}
-        </span>
+        </Text>
       )}
     </>
   );
