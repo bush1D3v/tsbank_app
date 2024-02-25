@@ -3,12 +3,17 @@ appId: com.tsbank.app
 - openLink: exp://127.0.0.1:8081
 
 - tapOn:
-    id: LoginEmailInput
+    id: LoginScreenEmailInput
 - inputRandomEmail
 
 - tapOn:
-    id: LoginPasswordInput
-- inputRandomNumber
+    id: LoginScreenPasswordInput
+- inputRandomNumber:
+    length: 8
+
+- hideKeyboard
 
 - tapOn:
-    id: LoginSubmitButton
+    id: LoginScreenSubmitButton
+
+- assertVisible: "Something went wrong!"
