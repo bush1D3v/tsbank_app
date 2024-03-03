@@ -5,8 +5,8 @@ import {
   waitFor,
   act
 } from "@testing-library/react-native";
-import { RegisterScreen } from ".";
 import { globals } from "@/styles";
+import Register from "@/app/register";
 
 const name: string = "Testing John Doe";
 const email: string = "victor.jose.lopes.navarro@gmail.com";
@@ -27,9 +27,9 @@ const RegisterScreenPhoneInputTestId: string = "RegisterScreenPhoneInput";
 const RegisterScreenPasswordInputTestId: string = "RegisterScreenPasswordInput";
 const RegisterScreenSubmitButtonTestId: string = "RegisterScreenSubmitButton";
 
-describe("Register Screen Tests", () => {
+describe("RegisterScreen Component Tests", () => {
   beforeEach(() => {
-    render(<RegisterScreen />);
+    render(<Register />);
   });
 
   it("Should be able to render the component correctly", () => {
