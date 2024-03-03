@@ -8,11 +8,14 @@ export const globals = StyleSheet.create({
     backgroundColor: "#3178c6",
   },
   text: {
-    color: "#eeeeee",
+    color: "#ffffff",
     textAlign: "center",
   },
   error: {
     color: "#e70008",
     marginBottom: -8
+  },
+  inputFormButton: {
+    color: "#12233f",
   }
 });
