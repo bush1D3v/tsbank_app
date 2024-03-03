@@ -1,6 +1,6 @@
 import { globals } from "@/styles";
 import { Link } from "expo-router";
-import { FlatList } from "react-native";
+import { View } from "react-native";
 
 interface PolicyAndTermsItems {
   key: string;
@@ -10,26 +10,27 @@ interface PolicyAndTermsItems {
 export function PolicyAndTerms(): React.JSX.Element {
   const data: PolicyAndTermsItems[] = [
     {
-      key: "Privacy Policy",
+      key: "Policy",
       href: "https://drive.google.com/file/d/1Mjdv1KKwJpRGx7gDOQ_X80mUAUpsSy7j/view?usp=sharing"
     },
     {
-      key: "Terms of use",
+      key: "Terms",
       href: "https://drive.google.com/file/d/1YPhg5eVoAGnskfyPtwkGv9ch0qC7ZVyQ/view?usp=sharing"
     }
   ];
 
   return (
-    <FlatList className="flex"
-      data={data}
-      renderItem={({ item }) =>
+    <View testID="PolicyAndTerms" className="flex flex-row items-center gap-4">
+      {data.map((item, index) => (
         <Link
-          style={globals.text}
+          key={index}
           href={item.href}
-          className="underline"
-          rel="noreferrer noopener">
-          {item.key}
-        </Link>
-      } />
+          style={globals.text}
+          className="underline text-xl"
+          rel="noreferrer noopener"
+          testID="PolicyAndTermsItem"
+        >{item.key}</Link>
+      ))}
+    </View>
   );
 }
