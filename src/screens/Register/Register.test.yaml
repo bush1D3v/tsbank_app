@@ -7,28 +7,27 @@ appId: com.tsbank.app
 
 - tapOn:
     id: RegisterScreenNameInput
-- inputText: "Testing John Doe"
+- inputText: ${NAME}
 
 - tapOn:
     id: RegisterScreenEmailInput
-- inputRandomEmail
+- inputText: ${EMAIL}
 
 - tapOn:
     id: RegisterScreenCpfInput
-- inputRandomNumber:
-    length: 11
+- inputText: ${CPF}
 
 - tapOn:
     id: RegisterScreenPhoneInput
-- inputRandomNumber:
-    length: 11
+- inputText: ${PHONE}
 
 - tapOn:
     id: RegisterScreenPasswordInput
-- inputRandomNumber:
-    length: 8
+- inputText: ${PASSWORD}
 
 - hideKeyboard
 
 - tapOn:
     id: RegisterScreenSubmitButton
+
+- assertVisible: "Something went wrong!"
