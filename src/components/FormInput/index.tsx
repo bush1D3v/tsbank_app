@@ -26,10 +26,10 @@ import {
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 interface FormMethodsProps {
-  formState: FormState<FormStateData>;
-  setFocus: UseFormSetFocus<FormStateData>;
-  getFieldState: UseFormGetFieldState<FormStateData>;
-  handleSubmit: UseFormHandleSubmit<FormStateData>;
+  formState: FormState<FormStateData | any>;
+  setFocus: UseFormSetFocus<FormStateData | any>;
+  getFieldState: UseFormGetFieldState<FormStateData | any>;
+  handleSubmit: UseFormHandleSubmit<FormStateData | any>;
   setValue: UseFormSetValue<FormStateData | any>;
   trigger: UseFormTrigger<FormStateData | any>;
   register: UseFormRegister<FormStateData | any>;
@@ -40,7 +40,7 @@ interface FormMethodsProps {
   reset: UseFormReset<FormStateData | any>;
   resetField: UseFormResetField<FormStateData | any>;
   setError: UseFormSetError<FormStateData | any>;
-  control: Control<FormStateData | any>;
+  control?: Control<FormStateData | any>;
 }
 
 type FormInputProps = TextInputProps & {
@@ -74,6 +74,7 @@ export function FormInput({
             formMethods.setValue(`userData.${inputLabel as UserDatas}`, text);
             formMethods.trigger(`userData.${inputLabel as UserDatas}`);
           }}
+          testID="FormInput"
           {...formMethods.register(`userData.${inputLabel as UserDatas}`)}
           {...rest}
         />
@@ -94,6 +95,7 @@ export function FormInput({
               text.replace(/\s/g, "");
             }
           }}
+          testID="FormInput"
           {...formMethods.register(`cardData.${inputLabel as CardDatas}`)}
           {...rest}
         />
@@ -111,6 +113,7 @@ export function FormInput({
             formMethods.setValue(`transactionData.${inputLabel as TransactionDatas}`, text);
             formMethods.trigger(`transactionData.${inputLabel as TransactionDatas}`);
           }}
+          testID="FormInput"
           {...formMethods.register(`transactionData.${inputLabel as TransactionDatas}`)}
           {...rest}
         />
