@@ -128,6 +128,7 @@ export function RegisterScreen(): React.JSX.Element {
           accessibilityLabel={isLoading ? "Creating..." : "Create Account"}
           title={isLoading ? "Creating..." : "Create Account"}
           onPress={methods.handleSubmit(onSubmit)}
+          color={globals.inputFormButton.color}
           testID="RegisterScreenSubmitButton"
         />
       </View>
