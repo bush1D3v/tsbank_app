@@ -6,8 +6,9 @@ export function Logo(): React.JSX.Element {
   return (
     <ImageBackground
       source={require("@/assets/tsbank-logo.png")}
-      className="h-full w-[52px]">
-      <Link href={HOME} className="w-full h-full" />
+      className="h-full w-[52px]"
+      testID="Logo">
+      <Link href={HOME} className="w-full h-full" testID="LogoLink" />
     </ImageBackground>
   );
 }
