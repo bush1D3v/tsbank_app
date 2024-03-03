@@ -8,11 +8,11 @@ import { type User } from "@/types";
 
 const initialUser: User = {
   id: 0,
-  name: "",
+  name: "John Doe",
   balance: 0,
-  cpf: "",
-  email: "",
-  phone: ""
+  cpf: "12345678912",
+  email: "johndoe@gmail.com",
+  phone: "21123456789"
 };
 
 const getUserInfo = async (callback: (user: User) => void) => {
