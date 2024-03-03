@@ -34,13 +34,14 @@ export function HooksList(): React.JSX.Element {
   ];
 
   return (
-    <View>
+    <View testID="HooksList">
       {data.map((item, index) => (
         <AnchorLink
           key={index}
           text={item.key}
           buttonBg="bg-saturatedBlue"
           className="text-white text-base"
+          testID="HooksListItem"
           href={item.href}
         />
       ))}
