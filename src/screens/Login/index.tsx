@@ -101,6 +101,7 @@ export function LoginScreen(): React.JSX.Element {
           accessibilityLabel={isLoading ? "Logging in..." : "Login"}
           title={isLoading ? "Logging in..." : "Login"}
           onPress={methods.handleSubmit(onSubmit)}
+          color={globals.inputFormButton.color}
           testID="LoginScreenSubmitButton"
         />
       </View>
