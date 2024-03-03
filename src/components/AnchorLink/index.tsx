@@ -22,6 +22,7 @@ export function AnchorLink({
       style={globals.text}
       href={href}
       className={className}
+      testID="AnchorLink"
       {...rest}
     >
       {text}
