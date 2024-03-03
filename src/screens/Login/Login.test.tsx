@@ -1,15 +1,15 @@
 import {
-  render,
   screen,
   fireEvent,
   waitFor,
-  act
+  act,
+  render
 } from "@testing-library/react-native";
-import { LoginScreen } from ".";
 import { globals } from "@/styles";
+import Login from "@/app";
 
-const email: string = "johnDoes@gmail.com";
-const password: string = "12345678";
+const email: string = "testingEmail2@gmail.com";
+const password: string = "32323232";
 
 const ModalTestId: string = "Modal";
 const RegisterRedirectTestId: string = "RegisterRedirect";
@@ -21,9 +21,9 @@ const LoginScreenEmailInputTestId: string = "LoginScreenEmailInput";
 const LoginScreenPasswordInputTestId: string = "LoginScreenPasswordInput";
 const LoginScreenSubmitButtonTestId: string = "LoginScreenSubmitButton";
 
-describe("Login Screen Tests", () => {
+describe("LoginScreen Component Tests", () => {
   beforeEach(() => {
-    render(<LoginScreen />);
+    render(<Login />);
   });
 
   it("Should be able to render the component correctly", () => {
@@ -157,7 +157,7 @@ describe("Login Screen Tests", () => {
     await waitFor(() => {
       expect(screen.getByTestId(ModalTestId)).toBeOnTheScreen();
       expect(screen.getByTestId(ModalTestId)).toHaveTextContent(
-        "Error 401: Invalid email and/or password."
+        "Error 401: Invalid email and/or password"
       );
     });
   });
