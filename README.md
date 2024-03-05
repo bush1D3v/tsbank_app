@@ -26,7 +26,8 @@ O **TSBank APP** é uma aplicação **mobile** do nosso queridíssimo <a href="h
    <img align='center' height='54' width='68' title='Jest' alt='jest' src='https://github.com/devicons/devicon/blob/master/icons/jest/jest-plain.svg' />&nbsp;
    <img align='center' height='54' width='58' title='React Native Testing Library' alt='react native testing library' src='https://github.com/bush1D3v/tsbank_app/assets/133554156/3c784e7a-699a-4dd0-b80f-a87616f5aae0' />&nbsp;
    <img align='center' height='54' width='58' title='Jest-Native Testing Library' alt='jest-native testing library' src='https://github.com/bush1D3v/tsbank_app/assets/133554156/fd7dff8e-f9fe-49f2-a332-b716ed1870de' />&nbsp;
-   <img align='center' height='54' width='44' title='Storybook-js' alt='storybook-js' src='https://github.com/bush1D3v/my_portfolio/assets/133554156/213c8aa4-ce24-4b30-8e07-dceb476e8589' />
+   <img align='center' height='54' width='44' title='Storybook-js' alt='storybook-js' src='https://github.com/bush1D3v/my_portfolio/assets/133554156/213c8aa4-ce24-4b30-8e07-dceb476e8589' /> &nbsp;
+   <img align='center' height='60' width='60' title='Miro' alt='miro' src='https://github.com/bush1D3v/tsbank_front/assets/133554156/a13c4c2a-892e-4f34-911d-71630ce7a35d' />
 </div>
 
 ## 🏗 Estrutura e Arquitetura
@@ -40,6 +41,10 @@ Com a adição do Docker, você agora pode utilizar dos scripts fornecidos em `p
 Para isso, segue a lista de funções de cada script:
 
 > `docker-build`: Constrói a imagem docker do projeto <br> `docker-start`: Sobe e roda/só roda o container tsbank_app <br> `docker-stop`: Para o container tsbank_app
+
+## 🎨 Miro
+
+Com a adição do Miro, foi criado o **fluxograma** do TSBank. Abaixo, segue o link de visualização: <https://miro.com/app/board/uXjVNmeu-5k=/?share_link_id=758188566721>
 
 # 🖋️ Contribuindo para o TSBank APP
 
